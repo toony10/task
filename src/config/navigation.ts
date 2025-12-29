@@ -1,12 +1,12 @@
 import {
   Home,
-  BookOpen,
+  Users,
   ShoppingBag,
-  MessageSquare,
-  GraduationCap,
-  Info,
-  Phone,
+  BarChart3,
+  FileText,
+  Mail,
   Settings,
+  HelpCircle,
   type LucideIcon
 } from 'lucide-react'
 
@@ -32,66 +32,66 @@ export const navigation: NavGroup[] = [
   {
     items: [
       {
-        title: 'الصفحة الرئيسية',
+        title: 'Dashboard',
         url: '/',
         icon: Home,
-        isActive: true,
+        isActive: true
+      },
+      {
+        title: 'Users',
+        url: '/users',
+        icon: Users,
         items: [
-          { title: 'الهيرو سيكشن', url: '/hero' },
-          { title: 'الإحصائيات', url: '/statistics' },
-          { title: 'المميزات', url: '/features' }
+          { title: 'All Users', url: '/users' },
+          { title: 'Add User', url: '/users/add' },
+          { title: 'Roles', url: '/users/roles' }
         ]
       },
       {
-        title: 'الموسوعة',
-        url: '/encyclopedia',
-        icon: BookOpen,
+        title: 'Products',
+        url: '/products',
+        icon: ShoppingBag,
         items: [
-          { title: 'المقالات', url: '/encyclopedia/articles' },
-          { title: 'الفئات', url: '/encyclopedia/categories' }
+          { title: 'All Products', url: '/products' },
+          { title: 'Add Product', url: '/products/add' },
+          { title: 'Categories', url: '/products/categories' }
         ]
       },
       {
-        title: 'المتجر',
-        url: '/store',
-        icon: ShoppingBag
+        title: 'Analytics',
+        url: '/analytics',
+        icon: BarChart3
       },
       {
-        title: 'المنتدى',
-        url: '/forum',
-        icon: MessageSquare
+        title: 'Reports',
+        url: '/reports',
+        icon: FileText
       },
       {
-        title: 'الأكاديمية',
-        url: '/academy',
-        icon: GraduationCap
-      },
-      {
-        title: 'من نحن',
-        url: '/about',
-        icon: Info
-      },
-      {
-        title: 'تواصل معنا',
-        url: '/contact',
-        icon: Phone
+        title: 'Messages',
+        url: '/messages',
+        icon: Mail
       }
     ]
   },
   {
     items: [
       {
-        title: 'الإعدادات',
+        title: 'Settings',
         url: '/settings',
         icon: Settings
+      },
+      {
+        title: 'Help',
+        url: '/help',
+        icon: HelpCircle
       }
     ]
   }
 ]
 
 export const user = {
-  name: 'محمد علي',
-  email: 'mohamedali32@gmail.com',
+  name: 'John Doe',
+  email: 'john.doe@example.com',
   avatar: '/avatars/user.jpg'
 }
-
