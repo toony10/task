@@ -9,7 +9,7 @@ const cairo = Cairo({
 })
 
 export const metadata: Metadata = {
-  title: 'عملاتي - لوحة التحكم',
+  title: '(عنوان الموقع) - لوحة التحكم',
   description: 'لوحة تحكم عملاتي'
 }
 

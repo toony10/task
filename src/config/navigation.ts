@@ -42,9 +42,7 @@ export const navigation: NavGroup[] = [
         url: '/users',
         icon: Users,
         items: [
-          { title: 'All Users', url: '/users' },
-          { title: 'Add User', url: '/users/add' },
-          { title: 'Roles', url: '/users/roles' }
+          { title: 'User1', url: '/users/user1' },
         ]
       },
       {
@@ -52,7 +50,7 @@ export const navigation: NavGroup[] = [
         url: '/products',
         icon: ShoppingBag,
         items: [
-          { title: 'All Products', url: '/products' },
+          { title: 'All Products', url: '/products1' },
           { title: 'Add Product', url: '/products/add' },
           { title: 'Categories', url: '/products/categories' }
         ]

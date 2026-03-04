@@ -1,10 +1,10 @@
 'use client'
 
-import { useState, useMemo, useCallback, useRef, useEffect } from 'react'
+import { useState, useMemo, useCallback, useRef, useEffect, useEffectEvent } from 'react'
 import { useRouter } from 'next/navigation'
 import { Search } from 'lucide-react'
 import { SidebarInput } from '@/components/ui/sidebar'
-import { navigation, type NavItem, type NavSubItem } from '@/config/navigation'
+import { navigation, type NavItem } from '@/config/navigation'
 import { cn } from '@/lib/utils'
 
 type SearchResult = {
@@ -98,9 +98,9 @@ export function SearchForm() {
     }
   }, [isOpen, filteredResults, selectedIndex, handleSelect])
 
-  useEffect(() => {
+  useEffectEvent(() => {
     setSelectedIndex(0)
-  }, [filteredResults])
+  })
 
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
@@ -167,7 +167,7 @@ export function SearchForm() {
 
       { isOpen && query.trim() && filteredResults.length === 0 && (
         <div className="absolute top-full right-0 left-0 z-50 mt-1 rounded-md border bg-popover p-3 text-center text-sm text-muted-foreground shadow-lg" dir="rtl">
-          لا توجد نتائج لـ "{ query }"
+          لا توجد نتائج لـ &quot;{ query }&quot;
         </div>
       ) }
     </div>

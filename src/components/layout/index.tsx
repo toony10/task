@@ -45,17 +45,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
 
       <SidebarFooter>
         <SidebarGroup className="group-data-[collapsible=icon]:hidden">
-          <SidebarGroupContent>
-            <Button
-              variant="ghost"
-              className="w-full justify-start gap-2 text-destructive hover:text-destructive hover:bg-destructive/10"
-            >
-              <LogOut className="size-4" />
-              <span>تسجيل الخروج</span>
-            </Button>
-          </SidebarGroupContent>
         </SidebarGroup>
-
         <NavUser user={ user } />
       </SidebarFooter>
 
