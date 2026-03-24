@@ -43,6 +43,7 @@ export const navigation: NavGroup[] = [
         icon: Users,
         items: [
           { title: 'User1', url: '/users/user1' },
+          { title: 'User2', url: '/users/user2' },
         ]
       },
       {

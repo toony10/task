@@ -73,10 +73,10 @@ export default function TextEditor({
 
   return (
     <div className='text-editor'>
-      { editor && <MenuBar editor={ editor } /> }
       <div className='text-editor-body' style={ { minHeight } }>
         <EditorContent editor={ editor } />
       </div>
+      { editor && <MenuBar editor={ editor } /> }
       <input type='hidden' name={ name } value={ value } />
     </div>
   )

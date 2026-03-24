@@ -1,3 +1,4 @@
+import { useEffect, useReducer } from 'react'
 import {
   AlignCenter,
   AlignLeft,
@@ -19,6 +20,16 @@ import { Editor } from '@tiptap/react'
 import { MdOutlineHorizontalRule } from 'react-icons/md'
 
 export default function MenuBar({ editor }: { editor: Editor | null }) {
+  const [, forceUpdate] = useReducer(x => x + 1, 0)
+
+  useEffect(() => {
+    if (!editor) return
+    editor.on('transaction', forceUpdate)
+    return () => {
+      editor.off('transaction', forceUpdate)
+    }
+  }, [editor])
+
   if (!editor) {
     return null
   }
