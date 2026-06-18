@@ -114,7 +114,7 @@ export default function QualityControlChart() {
           <div className="mb-4 rounded-2xl border border-border/60 bg-muted/20 px-4 py-3">
             <p className="text-xs text-muted-foreground">إجمالي الاعتمادات</p>
             <p className="mt-1 text-lg font-bold text-foreground">
-              +{ total.toLocaleString('ar-SA') } طلب
+              +{ total } طلب
             </p>
           </div>
 

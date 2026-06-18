@@ -157,7 +157,7 @@ export default function GeneralStatisticsCard() {
             <div className="rounded-2xl bg-muted/40 p-4">
               <p className="text-sm text-muted-foreground">عدد المشاريع</p>
               <p className="mt-1 text-2xl font-bold text-foreground sm:text-3xl">
-                { data.projectsCount.toLocaleString('ar-SA') }
+                { data.projectsCount }
               </p>
             </div>
           </div>

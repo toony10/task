@@ -11,8 +11,8 @@ const cairo = Cairo({
 })
 
 export const metadata: Metadata = {
-  title: '(عنوان الموقع) - لوحة التحكم',
-  description: 'لوحة تحكم عملاتي'
+  title: 'ريف السعودية - لوحة التحكم',
+  description: 'لوحة تحكم ريف السعودية'
 }
 
 export default function RootLayout({
