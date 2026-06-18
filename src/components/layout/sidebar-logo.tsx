@@ -10,7 +10,7 @@ export function SidebarLogo() {
     <SidebarMenu>
       <SidebarMenuItem>
         <SidebarMenuButton size="lg" asChild className="hover:bg-transparent">
-          <Logo />
+          <Logo width={ 200 } height={ 200 } />
         </SidebarMenuButton>
       </SidebarMenuItem>
     </SidebarMenu>

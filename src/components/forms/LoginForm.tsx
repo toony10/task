@@ -50,7 +50,7 @@ export default function LoginForm() {
           <Logo width={ 120 } height={ 120 } />
 
           <div className="text-center">
-            <h1 className="text-2xl font-bold text-[#16368d]">
+            <h1 className="text-2xl font-bold text-primary">
               مرحبا بك في لوحة التحكم
             </h1>
             <p className="mt-2 text-sm text-muted-foreground">
