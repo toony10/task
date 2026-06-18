@@ -1,13 +1,9 @@
 import {
   Home,
-  Users,
-  ShoppingBag,
-  BarChart3,
-  FileText,
-  Mail,
   Settings,
   HelpCircle,
-  type LucideIcon
+  type LucideIcon,
+  ChartArea
 } from 'lucide-react'
 
 export type NavSubItem = {
@@ -32,58 +28,10 @@ export const navigation: NavGroup[] = [
   {
     items: [
       {
-        title: 'Dashboard',
-        url: '/',
-        icon: Home,
+        title: 'Stastics',
+        url: '/stastics',
+        icon: ChartArea,
         isActive: true
-      },
-      {
-        title: 'Users',
-        url: '/users',
-        icon: Users,
-        items: [
-          { title: 'User1', url: '/users/user1' },
-          { title: 'User2', url: '/users/user2' },
-        ]
-      },
-      {
-        title: 'Products',
-        url: '/products',
-        icon: ShoppingBag,
-        items: [
-          { title: 'All Products', url: '/products1' },
-          { title: 'Add Product', url: '/products/add' },
-          { title: 'Categories', url: '/products/categories' }
-        ]
-      },
-      {
-        title: 'Analytics',
-        url: '/analytics',
-        icon: BarChart3
-      },
-      {
-        title: 'Reports',
-        url: '/reports',
-        icon: FileText
-      },
-      {
-        title: 'Messages',
-        url: '/messages',
-        icon: Mail
-      }
-    ]
-  },
-  {
-    items: [
-      {
-        title: 'Settings',
-        url: '/settings',
-        icon: Settings
-      },
-      {
-        title: 'Help',
-        url: '/help',
-        icon: HelpCircle
       }
     ]
   }

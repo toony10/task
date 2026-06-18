@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
 import { Cairo } from 'next/font/google'
+import { NuqsAdapter } from 'nuqs/adapters/next/app'
+import ToastProvider from '@/components/providers/ToastProvider'
 import './globals.css'
 
 const cairo = Cairo({
@@ -21,7 +23,10 @@ export default function RootLayout({
   return (
     <html lang="ar" dir="rtl">
       <body className={ `${ cairo.variable } font-sans antialiased` }>
-        { children }
+        <NuqsAdapter>
+          { children }
+        </NuqsAdapter>
+        <ToastProvider />
       </body>
     </html>
   )

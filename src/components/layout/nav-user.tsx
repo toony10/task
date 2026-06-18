@@ -1,6 +1,7 @@
 'use client'
 
 import { LogOut, ChevronsUpDown } from 'lucide-react'
+import { useRouter } from 'next/navigation'
 
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import {
@@ -16,6 +17,7 @@ import {
   SidebarMenuItem,
   useSidebar
 } from '@/components/ui/sidebar'
+import { clearTokens } from '@/lib/tokenStorage'
 
 type NavUserProps = {
   user: {
@@ -27,6 +29,12 @@ type NavUserProps = {
 
 export function NavUser ({ user }: NavUserProps) {
   const { isMobile, state } = useSidebar()
+  const router = useRouter()
+
+  const handleLogout = () => {
+    clearTokens()
+    router.push('/login')
+  }
 
   const getInitials = (name: string) => {
     return name
@@ -78,7 +86,10 @@ export function NavUser ({ user }: NavUserProps) {
               </div>
             </div>
             <DropdownMenuSeparator />
-            <DropdownMenuItem className="text-destructive focus:text-destructive">
+            <DropdownMenuItem
+              className="text-destructive focus:text-destructive"
+              onClick={ handleLogout }
+            >
               <LogOut className="ml-2" />
               <span>تسجيل الخروج</span>
             </DropdownMenuItem>
